@@ -1,0 +1,122 @@
+﻿@model Grocery_DAO.user
+
+@{
+    ViewBag.Title = "LogedIn";
+}
+
+<style>
+
+    .myFormDesign {
+        margin-top: 50px;
+        border-radius: 10px;
+        padding: 30px;
+        max-width: 500px;
+        height: fit-content;
+        background-color: rgb(245 153 194 / 41%);
+    }
+
+    .msg{
+        position:absolute;
+        background-color: rgb(245 153 194 / 41%);
+        padding:4px;
+        border-radius:3px;
+    }
+    .msg:hover{
+        cursor:pointer;
+    }
+    .msgVisible{
+       display:none;
+    }
+    
+    .form-control {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #5555ff;
+        border-radius: 0px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .loginContainer {
+        display: flex;
+        justify-content: center;
+        background-image: Url('../../Content/Images/homeImage.jpg');
+        background-size: cover;
+        height: 93vh;
+    }
+    .form-control:not(:placeholder-shown) {
+        background-color: rgba(0, 0, 0, 0);
+        color:#fff;
+    }
+    .h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .fieldText {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .form-label {
+        font-weight: bold;
+    }
+    .btn-submit{
+        padding:5px;
+    }
+</style>
+
+<script>
+    function hideMe()
+    {
+        document.getElementById("msg1").classList.add("msgVisible");
+    }
+</script>
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="loginContainer">
+    @if (ViewBag.Message != null)
+    {
+        <p id="msg1" class="msg" onclick="hideMe()">@ViewBag.Message</p>
+    }
+    <div class="form-horizontal myFormDesign">
+        <h2 class="text-center">Log In</h2>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group row my-2">
+            @Html.LabelFor(model => model.userName, htmlAttributes: new { @class = "control-label col-md-4 text-primary fieldText" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.userName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.userName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row my-2">
+            @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "control-label col-md-4 text-primary fieldText" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control",type="password" } })
+                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group row my-2 ">
+            <div class="col-md-offset-2 col-md-8 d-flex justify-content-end ">
+                <input type="submit" value="LogIn" class="btn btn-primary btn-submit px-2 " />
+            </div>
+            <div>
+                No Account?
+                @Html.ActionLink("Register", "Create", null, new { @class = "" })
+            </div>
+        </div>
+    </div>
+
+</div>
+}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+

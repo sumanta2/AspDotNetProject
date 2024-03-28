@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .header {
+            background-color: #273a4df7;
+            /* Navbar background color */
+            color: #ffffff;
+            /* Navbar text color */
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .header .navbar-nav .nav-link {
+            color: #ffffff;
+            /* Navbar link color */
+        }
+    </style>
+</head>
+<body>
+    
+    @if (Session["userType"]!= null)
+    {
+        <header class="header">
+            <nav class="navbar navbar-expand-sm navbar-dark">
+                <div class="container-fluid">
+                    @Html.ActionLink("Grocery Store", "ProductCards", "GMSProducts", new { area = "" }, new { @class = "navbar-brand" })
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                @Html.ActionLink("Products", "ProductCards", "GMSProducts", new { area = "" }, new { @class = "nav-link" })
+                            </li>
+
+                            <li class="nav-item">
+                                <!--Disply Sells History-->
+                                @Html.ActionLink("Orders", "Index", "GMSOrders", new { area = "" }, new { @class = "nav-link" })
+                            </li>
+                            @if (Session["userType"] != null && Session["userType"].Equals("seller"))
+                            {
+                                <li class="nav-item">
+                                    <!--Update Product by Seller-->
+                                    @Html.ActionLink("Manage Product", "Index", "GMSProducts", new { area = "" }, new { @class = "nav-link" })
+                                </li>
+
+                            }
+
+                            <li class="nav-item">
+                                
+                                @Html.ActionLink("LogOut", "LogedOut", "GMSUsers", new { area = "" }, new { @class = "nav-link" })
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+            
+     }
+    <div class="" style="margin:0px;">
+        @RenderBody()
+        <footer>
+            <p>&copy; Design and developed by Sumanta Gorai </p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

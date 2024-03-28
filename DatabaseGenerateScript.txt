@@ -1,0 +1,122 @@
+//here i provide the script which i can use leter to create table in ssms in other system.
+
+
+first create a DataBase [GroceryManagement] and inside this create the tables by running following script like this
+
+
+---------------User Table-----------------------------Create first-----------------------------------------------------------------------
+
+
+
+USE [GroceryManagement]
+GO
+
+/****** Object:  Table [dbo].[user]    Script Date: 28-03-2024 10.52.26 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[user](
+	[userId] [int] IDENTITY(1,1) NOT NULL,
+	[userName] [nvarchar](50) NOT NULL,
+	[password] [nvarchar](50) NOT NULL,
+	[userType] [nvarchar](50) NOT NULL,
+	[firstName] [nvarchar](50) NOT NULL,
+	[lastName] [nvarchar](50) NOT NULL,
+	[contactNumber] [nvarchar](50) NOT NULL,
+	[email] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_user] PRIMARY KEY CLUSTERED 
+(
+	[userId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+---------------Product  Table-----------------------------after creating User table--------------------------------------------------------
+
+
+USE [GroceryManagement]
+GO
+
+/****** Object:  Table [dbo].[product]    Script Date: 28-03-2024 10.56.05 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[product](
+	[productId] [int] IDENTITY(1,1) NOT NULL,
+	[userId] [int] NOT NULL,
+	[productName] [nvarchar](50) NOT NULL,
+	[description] [nvarchar](50) NOT NULL,
+	[price] [int] NOT NULL,
+	[stockQuantity] [int] NOT NULL,
+	[image_name] [varbinary](max) NOT NULL,
+	[orderQuantity] [int] NULL,
+ CONSTRAINT [PK_product] PRIMARY KEY CLUSTERED 
+(
+	[productId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[product]  WITH CHECK ADD  CONSTRAINT [FK_product_user] FOREIGN KEY([userId])
+REFERENCES [dbo].[user] ([userId])
+GO
+
+ALTER TABLE [dbo].[product] CHECK CONSTRAINT [FK_product_user]
+GO
+
+
+
+
+---------------Order  Table-----------------------------after creating Product table----------------------------------------------------------
+
+
+
+USE [GroceryManagement]
+GO
+
+/****** Object:  Table [dbo].[order]    Script Date: 28-03-2024 10.58.10 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[order](
+	[orderId] [int] IDENTITY(1,1) NOT NULL,
+	[userId] [int] NOT NULL,
+	[productId] [int] NOT NULL,
+	[quantity] [int] NOT NULL,
+	[total] [decimal](18, 0) NOT NULL,
+ CONSTRAINT [PK_order] PRIMARY KEY CLUSTERED 
+(
+	[orderId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[order]  WITH CHECK ADD  CONSTRAINT [FK_order_product] FOREIGN KEY([productId])
+REFERENCES [dbo].[product] ([productId])
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[order] CHECK CONSTRAINT [FK_order_product]
+GO
+
+ALTER TABLE [dbo].[order]  WITH CHECK ADD  CONSTRAINT [FK_order_user] FOREIGN KEY([userId])
+REFERENCES [dbo].[user] ([userId])
+ON DELETE CASCADE
+GO
+
+ALTER TABLE [dbo].[order] CHECK CONSTRAINT [FK_order_user]
+GO
+
+
+
+

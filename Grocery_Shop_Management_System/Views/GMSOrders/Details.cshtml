@@ -1,0 +1,72 @@
+﻿@model Grocery_DAO.order
+
+@{
+    ViewBag.Title = "Order Detail";
+}
+
+<style>
+    .billContainer {
+        height: 84vh;
+        background-image: Url('../../Content/Images/homeImage.jpg');
+        background-size: cover;
+        overflow-y: scroll;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bill-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        max-width: 513px;
+        margin: auto;
+        height: fit-content;
+        background-color: rgb(245 153 194 / 71%);
+    }
+
+    .bill-heading {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .bill-details {
+        margin-bottom: 30px;
+    }
+
+    .btn-print {
+        border-radius: 20px;
+    }
+    
+</style>
+
+<script>
+    function printDiv() {
+        var printContainer = document.getElementById("printable").innerHTML;
+        var originalContent = document.body.innerHTML;
+        document.body.innerHTML = printContainer;
+        window.print();
+        document.body.innerHTML = originalContent;
+    }
+
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="billContainer">
+        <div id="printable" class="bill-container">
+            <h2 class="bill-heading">Bill</h2>
+            <div class="bill-details">
+                <p><strong>Product Name:</strong> @Model.product.productName</p>
+                <p><strong>Customer Name:</strong> @Model.user.userName</p>
+                <p><strong>Quantity:</strong> @Model.quantity</p>
+                <p><strong>Amount per Product:</strong> ₹@Model.product.price</p>
+                <p><strong>Total Amount:</strong> ₹@Model.total</p>
+            </div>
+            <button class="btn btn-primary btn-print" onclick="printDiv()">Print Bill</button>
+        </div>
+    </div>
+
+}

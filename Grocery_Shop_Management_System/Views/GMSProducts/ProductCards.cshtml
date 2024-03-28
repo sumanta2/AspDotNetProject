@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Grocery_DAO.product>
+
+
+@{
+    ViewBag.Title = "Products";
+}
+
+<style>
+    .productContainer {
+        background-image: url("../../Content/Images/homeImage.jpg");
+        background-size: cover;
+        padding: 12px;
+        padding-bottom: 0px;
+        height: 84vh;
+        overflow-y: scroll;
+    }
+    .product-card {
+        margin-bottom: 30px;
+        border-radius: 10px;
+        background-color: rgb(245 153 194 / 61%);
+        //box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-image {
+        height: 150px;
+        object-fit: cover;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .purchase-button {
+        border-radius: 20px;
+        width: 50%;
+    }
+</style>
+
+
+<div class="productContainer">
+
+    @*<div class="row mb-4 align-items-end">
+        <div class="col-md-5">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for items...">
+                <button class="btn btn-primary" type="button">Search</button>
+            </div>
+        </div>
+        <div class="col-md-2 text-center w-25">
+            <button class="btn btn-success">Show All Items</button>
+        </div>
+    </div>*@
+
+    <div class="row row-cols-2 row-cols-lg-3 g-4">
+        @{ 
+            int i = 0;
+        }
+        @foreach (var item in Model)
+        {
+            <div class="col ">
+                <div class="card product-card  bgColor">
+                    <img src="@ViewBag.ImageData[i]" class="card-img-top product-image" alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">@item.productName</h5>
+                        <p class="card-text">@item.description</p>
+                        <p class="card-text text-success">Price: ₹@item.price</p>
+                        <p class="card-text text-muted">Stock Quantity: @item.stockQuantity</p>
+                        @Html.ActionLink("Details", "Details", new { id = item.productId }, new { @class = "btn btn-primary purchase-button" })
+                    </div>
+                </div>
+            </div>
+            i++;
+        }
+    </div>
+</div>

@@ -1,0 +1,149 @@
+﻿@model Grocery_DAO.user
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<style>
+
+    .myFormDesign {
+        margin-top: 50px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        max-width: 500px;
+        height: fit-content;
+        background-color: rgb(245 153 194 / 41%);
+    }
+
+
+    .container h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .fieldText {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .form-label {
+        font-weight: bold;
+    }
+
+    .loginContainer {
+        display: flex;
+        justify-content: center;
+        background-image: Url('../../Content/Images/homeImage.jpg');
+        background-size: cover;
+        height: 93vh;
+    }
+
+    .form-control {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #5555ff;
+        border-radius: 0px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .form-control:not(:placeholder-shown) {
+        background-color: rgba(0, 0, 0, 0);
+        color: #fff;
+    }
+
+    .btn-submit {
+        border-radius: 20px;
+    }
+</style>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+<div class="loginContainer">
+    <div class="form-horizontal myFormDesign">
+
+        <h2 class="text-center">Register</h2>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group row my-2">
+            @Html.LabelFor(model => model.userName, htmlAttributes: new { @class = "control-label col-md-4 text-primary fieldText" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.userName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.userName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row my-2">
+            @Html.LabelFor(model => model.password, htmlAttributes: new { @class = "control-label col-md-4 text-primary fieldText" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row my-2">
+            @Html.LabelFor(model => model.userType, htmlAttributes: new { @class = "control-label col-md-4 text-primary fieldText" })
+            <div class="col-md-8">
+                <span class="form-check d-inline-block">
+                    @Html.RadioButtonFor(model => model.userType, "seller", new { id = "userType1" , @class="form-check-input"})
+                    <label class="form-check-label" for="userType1">Seller</label>
+                </span>
+                <span>
+                    @Html.RadioButtonFor(model => model.userType, "customer", new { id = "userType2", @class = "form-check-input" })
+                    <label class="form-check-label" for="userType2">Customer</label>
+                </span>
+                @Html.ValidationMessageFor(model => model.userType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row my-2">
+            @Html.LabelFor(model => model.firstName, htmlAttributes: new { @class = "control-label col-md-4 text-primary fieldText" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.firstName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.firstName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row my-2">
+            @Html.LabelFor(model => model.lastName, htmlAttributes: new { @class = "control-label col-md-4 text-primary fieldText" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.lastName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.lastName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row my-2">
+            @Html.LabelFor(model => model.contactNumber, htmlAttributes: new { @class = "control-label col-md-4 text-primary fieldText" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.contactNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.contactNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row my-2">
+            @Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-4 text-primary fieldText" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group row my-2">
+            <div class="col-md-offset-2 col-md-8">
+                <input type="submit" value="Create" class="btn btn-primary" />
+               
+            </div>
+            <div>
+                Have an Account?  @Html.ActionLink("LogIn", "LogedIn")
+            </div>
+        </div>
+    </div>
+    </div>
+    }
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

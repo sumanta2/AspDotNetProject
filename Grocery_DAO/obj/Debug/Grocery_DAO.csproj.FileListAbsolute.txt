@@ -1,0 +1,24 @@
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\obj\Debug\Grocery_DAO.csproj.AssemblyReference.cache
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\obj\Debug\Grocery_DAO.csproj.CoreCompileInputs.cache
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\Grocery_DAO.dll.config
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\Grocery_DAO.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\Grocery_DAO.pdb
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\EntityFramework.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\EntityFramework.xml
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\obj\Debug\Grocery_DAO.csproj.CopyComplete
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\obj\Debug\Grocery_DAO.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_DAO\obj\Debug\Grocery_DAO.pdb
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\obj\Debug\Grocery_DAO.csproj.AssemblyReference.cache
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\obj\Debug\Grocery_DAO.csproj.CoreCompileInputs.cache
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\obj\Debug\Grocery_DAO.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\obj\Debug\Grocery_DAO.pdb
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\Grocery_DAO.dll.config
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\Grocery_DAO.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\Grocery_DAO.pdb
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\EntityFramework.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\EntityFramework.xml
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_DAO\obj\Debug\Grocery_DAO.csproj.CopyComplete

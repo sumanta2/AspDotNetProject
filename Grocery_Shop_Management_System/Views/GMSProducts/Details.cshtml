@@ -1,0 +1,89 @@
+﻿@model Grocery_DAO.product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+
+<style>
+    .detailContainer {
+        background-image:url("../../Content/Images/homeImage.jpg");
+        background-size:cover;
+        height: 84vh;
+        overflow-y: scroll;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    .mw{
+        max-width:109px;
+    }
+
+    .form-control1 {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #5555ff;
+        border-radius: 0px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .form-control:not(:placeholder-shown) {
+        background-color: rgba(0, 0, 0, 0);
+        color: #fff;
+    }
+</style>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="detailContainer">
+    <h2 class="text-center">Details</h2>
+    <div class="row">
+        <input type="hidden" name="productId" value="@Model.productId" />
+        <input type="hidden" name="price" value="@Model.price" />
+        <input type="hidden" name="stockQuantity" value="@Model.stockQuantity" />
+        <div class="col-md-10 offset-md-1">
+            <div class="product-container" style="margin-top: 0px; margin-bottom: 0px; background-color: rgb(245 153 194 / 71%)">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!--@Html.DisplayFor(model => model.image_name)-->
+                        <div class="product-image">
+                            <img src="@ViewBag.ImageData" alt="Product Image" class="img-fluid" style="max-height: 330px;">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="product-details">
+                            <h2 class="product-name">@Html.DisplayNameFor(model => model.productName) : @Html.DisplayFor(model => model.productName)</h2>
+                            <p class="product-description">@Html.DisplayNameFor(model => model.description): @Html.DisplayFor(model => model.description)</p>
+                            <p class="product-price">@Html.DisplayNameFor(model => model.price): ₹@Html.DisplayFor(model => model.price)</p>
+                            <p class="product-seller">Seller Name: @Html.DisplayFor(model => model.user.firstName)</p>
+                            <p class="product-seller ">@Html.DisplayNameFor(model => model.stockQuantity): @Html.DisplayFor(model => model.stockQuantity)</p>
+                            <p></p>
+
+                            <div class="form-group d-flex gap-1 mb-3">
+                                <label for="quantity">Quantity:</label>
+
+
+                                @Html.EditorFor(model => model.orderQuantity, new { htmlAttributes = new { @id = "quantity", @class = "form-control form-control1", @placeholder = "Enter quantity" } })
+                                @Html.ValidationMessageFor(model => model.orderQuantity, "", new { @class = "text-danger" })
+                            </div>
+
+                            @if (Session["userType"] != null && Session["userType"].Equals("customer"))
+                            {
+                                <input type="submit" formmethod="post" class="form-control btn btn-primary mw" value="Purchases" />
+                            }
+
+                            @Html.ActionLink("Back to List", "ProductCards", null, new { @class = "btn btn-info" })
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

@@ -1,0 +1,85 @@
+﻿@model Grocery_DAO.order
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<style>
+    .deleteContainer {
+        height: 84vh;
+        display: flex;
+        justify-content: center;
+        background-image: Url('../../Content/Images/homeImage.jpg');
+        background-size: cover;
+        overflow-y: scroll;
+    }
+
+    .myFormDesign {
+        margin-top: 50px;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        width: 445px;
+        height: fit-content;
+        background-color: rgb(245 153 194 / 71%);
+    }
+
+    .container h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .txt-control {
+        border-bottom: 1px solid #5555ff;
+        border-top: 1px solid #5555ff;
+    }
+
+    .txt-label {
+        font-weight: bold;
+        border-bottom: 1px solid #5555ff;
+        border-top: 1px solid #5555ff;
+    }
+
+    .btn-submit {
+        border-radius: 20px;
+    }
+</style>
+
+
+<div class="deleteContainer">
+    <div class="myFormDesign">
+        <h2 class="text-center">Delete Order</h2>
+
+
+        <div class="row  my-2">
+            <span class="col-5 txt-label text-primary">FirstName</span>
+            <span class="col-7 txt-control ">@Html.DisplayFor(model => model.user.firstName)</span>
+        </div>
+
+        <div class="row  my-2">
+            <span class="col-5 txt-label text-primary">Product Name</span>
+            <span class="col-7 txt-control ">@Html.DisplayFor(model => model.product.productName)</span>
+        </div>
+
+        <div class="row  my-2">
+            <span class="col-5 txt-label text-primary">Quantity</span>
+            <span class="col-7 txt-control ">@Html.DisplayFor(model => model.quantity)</span>
+        </div>
+
+        <div class="row  my-2">
+            <span class="col-5 txt-label text-primary">Total</span>
+            <span class="col-7 txt-control ">@Html.DisplayFor(model => model.total)</span>
+        </div>
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-danger btn-submit" /> 
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-info btn-submit" })
+            </div>
+        }
+    </div>
+</div>

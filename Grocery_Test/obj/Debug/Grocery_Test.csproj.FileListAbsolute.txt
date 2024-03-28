@@ -1,0 +1,30 @@
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Grocery_Test.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Grocery_Test.pdb
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\obj\Debug\Grocery_Test.csproj.AssemblyReference.cache
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\obj\Debug\Grocery_Test.csproj.CoreCompileInputs.cache
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\obj\Debug\Grocery_Test.csproj.CopyComplete
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\obj\Debug\Grocery_Test.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Trainning Notes\C#\DotNet\Grocery_Shop_Management_System\Grocery_Test\obj\Debug\Grocery_Test.pdb
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Grocery_Test.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Grocery_Test.pdb
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\obj\Debug\Grocery_Test.csproj.AssemblyReference.cache
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\obj\Debug\Grocery_Test.csproj.CoreCompileInputs.cache
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\obj\Debug\Grocery_Test.csproj.CopyComplete
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\obj\Debug\Grocery_Test.dll
+C:\Users\2318176\OneDrive - Cognizant\Desktop\Grocery_Shop_Management_System\Grocery_Test\obj\Debug\Grocery_Test.pdb
